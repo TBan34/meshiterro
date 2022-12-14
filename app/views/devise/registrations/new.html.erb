@@ -9,10 +9,6 @@
     <%= f.text_field :name, autofocus: true %>
   </div>
 
-<h2>Log in</h2>
-
-  <%= form_with model: @user, url: user_session_path do |f| %>
-
   <div class="field">
     <%= f.label :email %><br>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -22,12 +18,12 @@
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
+    <% end %><br>
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation %><br>
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
